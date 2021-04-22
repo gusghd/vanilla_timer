@@ -12,11 +12,11 @@ class Start {
 
     initialize() {
         this.input.init();
-        this.addEvnet();
+        this.addEvent();
     }
     
 
-    addEvnet() {
+    addEvent() {
         document.addEventListener('registTimer', (e) => {
             const timer = e.detail.timer;
             this.register(timer);
@@ -28,6 +28,7 @@ class Start {
                 clearInterval(item.interval);
                 item.element.remove();
             })
+            this.timers = [];
         })
     }
 
