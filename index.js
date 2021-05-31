@@ -63,6 +63,8 @@ class Start {
     }
 }
 
-const start = new Start();
+document.addEventListener('DOMContentLoaded', () => {
+    const start = new Start();
 
-start.initialize();
+    start.initialize();
+})
